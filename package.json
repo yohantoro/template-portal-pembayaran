@@ -1,0 +1,24 @@
+{
+  "name": "template-portal-pembayaran",
+  "version": "1.0.0",
+  "description": "Template untuk web portal pembayaran biaya kuliah menggunakan framework css Bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yohantoro/template-portal-pembayaran.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yohantoro/template-portal-pembayaran/issues"
+  },
+  "homepage": "https://github.com/yohantoro/template-portal-pembayaran#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.4.0",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1"
+  }
+}
