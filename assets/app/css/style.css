@@ -20,7 +20,7 @@ body {
     border-radius: .25rem
 }
 
-.callout h4 {
+.callout .callout-title {
     margin-top: 0;
     margin-bottom: .25rem
 }
@@ -41,7 +41,7 @@ body {
     border-left-color: #5bc0de
 }
 
-.callout-info h4 {
+.callout-info .callout-title {
     color: #5bc0de
 }
 
@@ -49,7 +49,7 @@ body {
     border-left-color: #f0ad4e
 }
 
-.callout-warning h4 {
+.callout-warning .callout-title {
     color: #f0ad4e
 }
 
@@ -57,7 +57,7 @@ body {
     border-left-color: #28a745
 }
 
-.callout-success h4 {
+.callout-success .callout-title {
     color: #28a745
 }
 
@@ -65,6 +65,6 @@ body {
     border-left-color: #d9534f
 }
 
-.callout-danger h4 {
+.callout-danger .callout-title {
     color: #d9534f
 }
