@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/app/css/style.css">
+    <!-- <script src="https://kit.fontawesome.com/3b4957157c.js" crossorigin="anonymous"></script> -->
+
+    <title>Keuportal Mahasiswa</title>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portal Keuangan Mahasiswa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tagihan.html">Tagihan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dispensasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pembayaran Lainnya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">VA BANK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rekap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrap">
+        <div class="container">
+            <div class="d-flex justify-content-between mb-2">
+                <h5>
+                    Tagihan
+                </h5>
+                <h5 class="text-right">
+                    Jajang Lorem Ipsum <br>
+                    <small class="text-secondary">195610101 &dash; Sistem Informasi</small>
+                </h5>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="callout callout-warning py-0 pl-3 mb-3 ml border-top-0 border-right-0 border-bottom-0">
+                        Keterangan:
+                        <ul class="my-0">
+                            <li class="list-item">
+                                <small>Denda akan diberikan jika tanggal tempo terlambat, dan dapat berupa akumulasi dari Denda sebelumnya</small>
+                            </li>
+                            <li class="list-item">
+                                <small>Sistem dapat secara otomatis sewaktu-waktu mengubah Tanggal Tempo dengan periode Tanggal Akhir Bayar berikutnya dan menjumlahkan akumulasi Denda yang harus Anda bayar untuk tiap tagihan.</small>
+                            </li>
+                            <li class="list-item">
+                                <small>Anda dipersilakan mengajukan dispensasi melalui menu <strong>Dispensasi</strong> atau <a href="#">tautan ini</a>.</small>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card shadow">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Nama Tagihan</th>
+                                        <th scope="col" class="text-center">Tanggal Akhir Bayar</th>
+                                        <th scope="col" class="text-center">Tanggal Tempo</th>
+                                        <th scope="col" class="text-center">Denda</th>
+                                        <th scope="col" class="text-center">Nominal</th>
+                                        <th scope="col" class="text-center">Pilih</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="lead">SPP Variabel</span> <br>
+                                            <small>
+                                                Tahun 2019/2020,
+                                                semester 6 - Genap
+                                            </small>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            24-02-2020
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <mark>13-03-2020</mark>
+                                        </td>
+                                        <td class="text-right align-middle">
+                                            0
+                                        </td>
+                                        <td class="text-right align-middle">
+                                            1.300.000
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="form-group field-tagihan-266082">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="hidden" name="Tagihan[pilih][266082]" value="0"><input type="checkbox" id="tagihan-266082" class="custom-control-input pilih-tagihan" name="Tagihan[pilih][266082]" value="1" checked="">
+                                                    <label class="custom-control-label" for="tagihan-266082"></label>
+                                                    <div class="invalid-feedback"></div>
+
+                                                </div>
+                                            </div>
+                                            <input type="hidden" class="total-control" name="total-control" value="840000">
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5">
+                                            Total: <small class="align-top text-secondary">Rp</small>
+                                            <span class="text-monospace text-danger lead">
+                                                <strong id="total-angka">1.300.000</strong>
+                                            </span> <br>
+                                            <small>
+                                                Terbilang: <strong><em id="total-bilangan" style="text-transform: capitalize;"> satu juta tiga ratus ribu Rupiah</em></strong>
+                                            </small>
+                                        </td>
+                                        <td class="align-middle">
+                                            <button type="button" id="submit-tagihan" class="btn btn-info btn-block" name="submit"><strong>Bayar</strong></button>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/jquery/dist/jquery.min.js"></script>
+    <script src="assets/popperjs/dist/umd/popper.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
