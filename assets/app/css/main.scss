@@ -31,30 +31,70 @@ $grays: map-merge(
 );
 
 $blue:    #007bff !default;
+$blue-dark:    #000066 !default;
+$blue-light:    #4ea1fb !default;
 $indigo:  #6610f2 !default;
+$indigo-dark:  #570cd2 !default;
+$indigo-light:  #721bff !default;
 $purple:  #6f42c1 !default;
+$purple-dark:  #58339d !default;
+$purple-light:  #7d49dd !default;
 $pink:    #e83e8c !default;
+$pink-dark:    #c73377 !default;
+$pink-light:    #fb3f95 !default;
 $red:     #dc3545 !default;
+$red-dark:     #bb2b39 !default;
+$red-light:     #f5384a !default;
 $orange:  #fd7e14 !default;
+$orange-dark:  #d76d14 !default;
+$orange-light:  #ff9e4e !default;
 $yellow:  #ffc107 !default;
+$yellow-dark:  #d7a200 !default;
+$yellow-light:  #f9c52c !default;
 $green:   #28a745 !default;
+$green-dark:   #218c39 !default;
+$green-light:   #31cf55 !default;
 $teal:    #20c997 !default;
+$teal-dark:    #179d75 !default;
+$teal-light:    #24f0b3 !default;
 $cyan:    #17a2b8 !default;
+$cyan-dark:    #118193 !default;
+$cyan-light:    #1bc3de !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $colors: map-merge(
   (
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
+    "blue": $blue,
+    "blue-dark": $blue-dark,
+    "blue-light": $blue-light,
+    "indigo": $indigo,
+    "indigo-dark": $indigo-dark,
+    "indigo-light": $indigo-light,
+    "purple": $purple,
+    "purple-dark": $purple-dark,
+    "purple-light": $purple-light,
+    "pink": $pink,
+    "pink-dark": $pink-dark,
+    "pink-light": $pink-light,
+    "red": $red,
+    "red-dark": $red-dark,
+    "red-light": $red-light,
+    "orange": $orange,
+    "orange-dark": $orange-dark,
+    "orange-light": $orange-light,
+    "yellow": $yellow,
+    "yellow-dark": $yellow-dark,
+    "yellow-light": $yellow-light,
+    "green": $green,
+    "green-dark": $green-dark,
+    "green-light": $green-light,
+    "teal": $teal,
+    "teal-dark": $teal-dark,
+    "teal-light": $teal-light,
+    "cyan": $cyan,
+    "cyan-dark": $cyan-dark,
+    "cyan-light": $cyan-light,
     "white":      $white,
     "gray":       $gray-600,
     "gray-dark":  $gray-800
@@ -75,6 +115,7 @@ $theme-colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
   (
+    "white":      $white,
     "primary":    $primary,
     "secondary":  $secondary,
     "success":    $success,
@@ -83,17 +124,36 @@ $theme-colors: map-merge(
     "danger":     $danger,
     "light":      $light,
     "dark":       $dark,
-    "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
-    "red":        $red,
-    "orange":     $orange,
-    "yellow":     $yellow,
-    "green":      $green,
-    "teal":       $teal,
-    "cyan":       $cyan,
-    "white":      $white,
+    "blue": $blue,
+    "blue-dark": $blue-dark,
+    "blue-light": $blue-light,
+    "indigo": $indigo,
+    "indigo-dark": $indigo-dark,
+    "indigo-light": $indigo-light,
+    "purple": $purple,
+    "purple-dark": $purple-dark,
+    "purple-light": $purple-light,
+    "pink": $pink,
+    "pink-dark": $pink-dark,
+    "pink-light": $pink-light,
+    "red": $red,
+    "red-dark": $red-dark,
+    "red-light": $red-light,
+    "orange": $orange,
+    "orange-dark": $orange-dark,
+    "orange-light": $orange-light,
+    "yellow": $yellow,
+    "yellow-dark": $yellow-dark,
+    "yellow-light": $yellow-light,
+    "green": $green,
+    "green-dark": $green-dark,
+    "green-light": $green-light,
+    "teal": $teal,
+    "teal-dark": $teal-dark,
+    "teal-light": $teal-light,
+    "cyan": $cyan,
+    "cyan-dark": $cyan-dark,
+    "cyan-light": $cyan-light,
   ),
   $theme-colors
 );
