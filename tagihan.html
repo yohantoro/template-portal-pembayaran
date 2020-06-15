@@ -6,44 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/app/css/style.css">
+    <link rel="stylesheet" href="assets/app/css/main.css">
+
+    <script src="assets/jquery/dist/jquery.min.js"></script>
     <!-- <script src="https://kit.fontawesome.com/3b4957157c.js" crossorigin="anonymous"></script> -->
 
     <title>Keuportal Mahasiswa</title>
 </head>
-<body class="bg-light">
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-blue-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Portal Keuangan Mahasiswa</a>
+            <a class="navbar-brand text-yellow" href="index.html">Keuportal</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tagihan.html">Tagihan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="pembayaran.html">Pembayaran</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Dispensasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">VA BANK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Rekap</a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tagihan.html">Tagihan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Dispensasi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pembayaran Lainnya</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">VA BANK</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Rekap</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-danger" href="#">
-                            Logout
+                        <a class="nav-link text-white" href="#">
+                            Jajang Lorem Ipsum
                         </a>
                     </li>
                 </ul>
@@ -54,106 +55,261 @@
     <div class="wrap">
         <div class="container">
             <div class="d-flex justify-content-between mb-2">
-                <h5>
+                <h2>
                     Tagihan
-                </h5>
-                <h5 class="text-right">
-                    Jajang Lorem Ipsum <br>
-                    <small class="text-secondary">195610101 &dash; Sistem Informasi</small>
-                </h5>
+                </h2>
             </div>
 
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="callout callout-warning py-0 pl-3 mb-3 ml border-top-0 border-right-0 border-bottom-0">
-                        Keterangan:
-                        <ul class="my-0">
-                            <li class="list-item">
-                                <small>Denda akan diberikan jika tanggal tempo terlambat, dan dapat berupa akumulasi dari Denda sebelumnya</small>
-                            </li>
-                            <li class="list-item">
-                                <small>Sistem dapat secara otomatis sewaktu-waktu mengubah Tanggal Tempo dengan periode Tanggal Akhir Bayar berikutnya dan menjumlahkan akumulasi Denda yang harus Anda bayar untuk tiap tagihan.</small>
-                            </li>
-                            <li class="list-item">
-                                <small>Anda dipersilakan mengajukan dispensasi melalui menu <strong>Dispensasi</strong> atau <a href="#">tautan ini</a>.</small>
-                            </li>
-                        </ul>
+
+                    <div class="callout callout-warning pl-3 py-0 mb-3 border-top-0 border-right-0 border-bottom-0">
+                        <p>
+                            Tagihan pembayaran sampai dengan tanggal 01-09-2020
+                        </p>
+                        <p class="mb-0">
+                            <span class="text-secondary">Total Tagihan Pembayaran</span>:
+                            <small class="align-top text-secondary">Rp</small>
+                            <span class="text-danger lead" id="total-angka">2.200.000</span>
+                        </p>
+                        <p>
+                            <span class="text-secondary">Terbilang:</span>
+                            <em id="total-bilangan" style="text-transform: capitalize;"> dua juta dua ratus ribu Rupiah</em>
+                        </p>
+
+                        <p>
+                            <mark>
+                                <small>
+                                    * Anda memiliki tagihan yang melebihi tanggal tempo.
+                                    Silakan menghubungi bagian keuangan untuk dispensasi.
+                                </small>
+                            </mark>
+                        </p>
                     </div>
-                    <div class="card shadow">
-                        <div class="table-responsive">
+
+                    <p class="mb-0 text-blue-dark">
+                        Pilih tagihan yang ingin Anda bayarkan,
+                        lalu klik tombol <strong><em>Selanjutnya</em></strong>
+                        untuk menuju ke proses pembayaran
+                    </p>
+
+                    <div class="card border-info shadow-sm mb-3">
+                        <div class="table-responsive-md">
                             <table class="table">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th scope="col">Nama Tagihan</th>
+                                        <th scope="col">Nama Biaya</th>
                                         <th scope="col" class="text-center">Tanggal Akhir Bayar</th>
                                         <th scope="col" class="text-center">Tanggal Tempo</th>
-                                        <th scope="col" class="text-center">Denda</th>
-                                        <th scope="col" class="text-center">Nominal</th>
+                                        <th scope="col" class="text-right">Denda</th>
+                                        <th scope="col" class="text-right">Tagihan</th>
                                         <th scope="col" class="text-center">Pilih</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <span class="lead">SPP Variabel</span> <br>
-                                            <small>
-                                                Tahun 2019/2020,
-                                                semester 6 - Genap
-                                            </small>
+                                            <strong>Item Tagihan Satu</strong>
+                                            <p class="mb-0">
+                                                <small>Tahun 2019/2020, semester 6 - Genap</small>
+                                            </p>
                                         </td>
-                                        <td class="text-center align-middle">
-                                            24-02-2020
+                                        <td class="text-center">
+                                            13-05-2020
                                         </td>
-                                        <td class="text-center align-middle">
-                                            <mark>13-03-2020</mark>
+                                        <td class="text-center">
+                                            <mark>13-05-2020</mark>
                                         </td>
-                                        <td class="text-right align-middle">
-                                            0
+                                        <td class="text-right">
+                                            100.000
                                         </td>
-                                        <td class="text-right align-middle">
+                                        <td class="text-right">
                                             1.300.000
                                         </td>
-                                        <td class="text-center align-middle">
-                                            <div class="form-group field-tagihan-266082">
+                                        <td class="text-center">
+                                            <div class="form-group field-tagihan-0">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="hidden" name="Tagihan[pilih][266082]" value="0"><input type="checkbox" id="tagihan-266082" class="custom-control-input pilih-tagihan" name="Tagihan[pilih][266082]" value="1" checked="">
-                                                    <label class="custom-control-label" for="tagihan-266082"></label>
-                                                    <div class="invalid-feedback"></div>
-
+                                                    <input type="hidden" name="Tagihan[pilih][0]" value="0">
+                                                    <input type="checkbox" id="tagihan-0" class="custom-control-input pilih-tagihan" name="Tagihan[pilih][0]" value="1" checked>
+                                                    <label class="custom-control-label" for="tagihan-0"></label>
                                                 </div>
                                             </div>
-                                            <input type="hidden" class="total-control" name="total-control" value="840000">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Item Pembayaran Dua</strong>
+                                            <p class="mb-0">
+                                                <small>Tahun 2019/2020, semester 6 - Genap</small>
+                                            </p>
+                                        </td>
+                                        <td class="text-center">
+                                            22-07-2020
+                                        </td>
+                                        <td class="text-center">
+                                            <mark>22-07-2020</mark>
+                                        </td>
+                                        <td class="text-right">
+                                            0
+                                        </td>
+                                        <td class="text-right">
+                                            300.000
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="form-group field-tagihan-2">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="hidden" name="Tagihan[pilih][2]" value="0">
+                                                    <input type="checkbox" id="tagihan-2" class="custom-control-input pilih-tagihan" name="Tagihan[pilih][2]" value="1" checked>
+                                                    <label class="custom-control-label" for="tagihan-2"></label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>Item Pembayaran Tiga</strong>
+                                            <p class="mb-0">
+                                                <small>Tahun 2019/2020, semester 6 - Genap</small>
+                                            </p>
+                                        </td>
+                                        <td class="text-center">
+                                            01-09-2020
+                                        </td>
+                                        <td class="text-center">
+                                            <mark>01-09-2020</mark>
+                                        </td>
+                                        <td class="text-right">
+                                            0
+                                        </td>
+                                        <td class="text-right">
+                                            500.000
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="form-group field-tagihan-3">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="hidden" name="Tagihan[pilih][3]" value="0">
+                                                    <input type="checkbox" id="tagihan-3" class="custom-control-input pilih-tagihan" name="Tagihan[pilih][3]" value="1">
+                                                    <label class="custom-control-label" for="tagihan-3"></label>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
 
                                 </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="5">
-                                            Total: <small class="align-top text-secondary">Rp</small>
-                                            <span class="text-monospace text-danger lead">
-                                                <strong id="total-angka">1.300.000</strong>
-                                            </span> <br>
-                                            <small>
-                                                Terbilang: <strong><em id="total-bilangan" style="text-transform: capitalize;"> satu juta tiga ratus ribu Rupiah</em></strong>
-                                            </small>
-                                        </td>
-                                        <td class="align-middle">
-                                            <button type="button" id="submit-tagihan" class="btn btn-info btn-block" name="submit"><strong>Bayar</strong></button>
-                                        </td>
-                                    </tr>
-                                </tfoot>
                             </table>
                         </div>
                     </div>
+                    <p class="text-right">
+                        <button type="button" id="submit-tagihan" class="btn btn-info" name="submit">
+                            Selanjutnya
+                        </button>
+                    </p>
+
+                    Keterangan:
+                    <ul class="my-0">
+                        <li class="list-item">
+                            <small>Denda akan diberikan jika tanggal tempo terlambat, dan dapat berupa akumulasi dari Denda sebelumnya</small>
+                        </li>
+                        <li class="list-item">
+                            <small>Sistem dapat secara otomatis sewaktu-waktu mengubah Tanggal Tempo dengan periode Tanggal Akhir Bayar berikutnya dan menjumlahkan akumulasi Denda yang harus Anda bayar untuk tiap tagihan.</small>
+                        </li>
+                        <li class="list-item">
+                            <small>Anda dipersilakan mengajukan dispensasi dengan menghubungi bagian Keuangan.</small>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="modal fade" id="information-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pembayaran</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <p class="text-blue-dark">
+                                <strong>2 Tagihan terpilih.</strong>
+                            </p>
+                            <strong class="mb-0">Item Tagihan Satu</strong>
+                            <p class="py-0 mb-0"><small>Tahun 2019/2020, semester 6 - Genap</small></p>
+                            <div class="callout callout-default py-1 mb-2 border-top-0 border-right-0 border-bottom-0">
+                                Sebesar: <small class="align-top text-secondary">Rp</small>1.400.000
+                            </div>
+
+                            <strong class="mb-0">Item Tagihan Dua</strong>
+                            <p class="py-0 mb-0"><small>Tahun 2019/2020, semester 6 - Genap</small></p>
+                            <div class="callout callout-default py-1 mb-2 border-top-0 border-right-0 border-bottom-0">
+                                Sebesar: <small class="align-top text-secondary">Rp</small>300.000
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="callout callout-info py-1 mb-2 border-top-0 border-right-0 border-bottom-0">
+                                <h5 class="mb-3">Total Pembayaran</h5>
+                                <p class="lead mb-0">
+                                    <small class="align-top text-secondary">Rp</small>1.400.000
+                                </p>
+                                <small>
+                                    <span class="text-secondary">Terbilang: </span>
+                                    <em>Satu Juta Empat Ratus Ribu Rupiah</em>
+                                </small>
+
+                                <p>
+                                    <div class="form-group field-tagihan-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="hidden" name="Deposit" value="0">
+                                            <input type="checkbox" id="deposit" class="custom-control-input pilih-tagihan" name="deposit" value="0">
+                                            <label class="custom-control-label" for="deposit">
+                                                Gunakan deposit saya (<small class="align-top text-secondary">Rp</small>50.000)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </p>
+
+                                <p class="mt-5">
+                                    <small>
+                                        * Dengan menekan tombol <em>Bayar</em>,
+                                        secara otomatis Anda menyetujui <a href="#">sayarat dan ketentuan</a> yang berlaku
+                                        serta mendapatkan Nomor Virtual Account [NAMA BANK] dengan masa aktif terbatas.
+                                        Segera lakukan pembayaran dengan transfer ke Nomor Virtual Account yang Anda dapatkan.
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <p class="text-right mb-0">
+                        <button type="button" class="btn btn-info" id="bayar">Bayar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    </p>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary">Ya, Saya Setuju</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('#submit-tagihan').on('click', function (e) {
+            $('#information-modal').modal('show');
+        });
+        $('#bayar').on('click', function (e) {
+            window.location.replace("pembayaran.html");
+        });
+    </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="assets/jquery/dist/jquery.min.js"></script>
     <script src="assets/popperjs/dist/umd/popper.min.js"></script>
     <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
