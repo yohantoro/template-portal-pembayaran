@@ -14,7 +14,7 @@
 
     <title>Keuportal Mahasiswa</title>
 </head>
-<body>
+<body class="bg-light">
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-blue-dark">
         <div class="container">
@@ -44,8 +44,25 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">
+                            <i class="fa fa-bell"></i> <span class="badge badge-pill badge-danger">2</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Jajang Lorem Ipsum
                         </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">
+                                Profil
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Riwayat
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa fa-sign-out text-secondary"></i> Logout
+                            </a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -53,6 +70,7 @@
     </nav>
 
     <div class="wrap">
+
         <div class="container">
 
             <div class="row">
