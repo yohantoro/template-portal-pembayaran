@@ -14,7 +14,7 @@
 
     <title>Keuportal Mahasiswa</title>
 </head>
-<body class="bg-light">
+<body>
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-blue-dark">
         <div class="container">
@@ -73,76 +73,55 @@
 
         <div class="container">
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="callout callout-warning bg-white shadow-sm mb-3">
-                        <strong>PERINGATAN</strong>
-
-                        <p>
-                            Pembayaran Anda akan berakhir dalam [COUNT DOWN].
-                            Segera lakukan pembayaran.
-                        </p>
-
-                        <a href="#" class="btn btn-sm btn-warning">Lihat Detail</a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="row d-flex">
+            <div class="row justify-content-center">
 
                 <div class="col-lg-8">
-                    <div class="alert alert-danger border-0 py-2 mb-2">
-                        <p class="mb-0">
-                            Sampai dengan tanggal <strong>01-09-2020</strong>, Anda memiliki 3 tagihan.
-                        </p>
-                    </div>
 
-                    <div class="card border-0 shadow mb-3">
-                        <table class="table">
-                            <tr>
-                                <td>
-                                    <strong>Item Pembayaran Satu</strong>
-                                    <p><small>Tahun 2019/2020, semester 6 - Genap</small></p>
-                                </td>
-                                <td class="text-right">
-                                    <small class="align-top text-secondary">Rp</small>1.400.000
-                                    <p><small>Jatuh tempo pada <mark>13-05-2020</mark></small></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Item Pembayaran Dua</strong>
-                                    <p><small>Tahun 2019/2020, semester 6 - Genap</small></p>
-                                </td>
-                                <td class="text-right">
-                                    <small class="align-top text-secondary">Rp</small>300.000
-                                    <p><small>Jatuh tempo pada <mark>22-07-2020</mark></small></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Item Pembayaran Dua</strong>
-                                    <p><small>Tahun 2019/2020, semester 6 - Genap</small></p>
-                                </td>
-                                <td class="text-right">
-                                    <small class="align-top text-secondary">Rp</small>500.000
-                                    <p><small>Jatuh tempo pada <mark>01-09-2020</mark></small></p>
-                                </td>
-                            </tr>
-                        </table>
+                    <!-- <div class="card bg-blue-dark shadow-sm mb-3">
+                        <div class="card-body text-center">
+                            <h4 class="text-warning">PERINGATAN</h4>
+
+                            <p class="text-light">
+                                Pembayaran Anda akan berakhir dalam
+                            </p>
+
+                            <h1 class="text-danger">
+                                [COUNT DOWN]
+                            </h1>
+
+                            <p class="text-light">Mohon segera lakukan pembayaran.</p>
+
+                            <a href="pembayaran.html" class="btn btn-warning">Detail Pembayaran</a>
+                        </div>
+                    </div> -->
+
+                    <div class="callout callout-info shadow-sm">
+                        <h4>Jajang Lorem Ipsum</h4>
+                        <p>Teknik Informatika - 123123123</p>
+
+                        <p>
+                            Deposit: <small class="align-top text-secondary">Rp</small>50.000
+                        </p>
                     </div>
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="card border-0 shadow mb-3" style="background-color: #33f6ff1a;">
-                        <div class="card-body pb-0">
-                            <h1 class="text-md-right text-blue-dark">
+
+                    <div class="card shadow-sm mb-3">
+
+                        <div class="card-body">
+
+                            <p class="text-danger">
+                                <i class="fa fa-warning"></i> Anda memiliki 3 tagihan pembayaran.
+                            </p>
+
+                            <h1 class="text-danger">
                                 <small class="align-top text-secondary">Rp</small>2.200.000
                             </h1>
-                            <p class="text-secondary text-md-right">
+                            <p class="text-secondary">
                                 Total tagihan pembayaran Anda
                             </p>
+
                             <hr>
 
                             <dl class="row">
@@ -152,10 +131,36 @@
                                 <dd class="col-sm-6 text-md-right"><small class="align-top text-secondary">Rp</small>100.000</dd>
                             </dl>
 
+                            <hr>
+
+                            <p>
+                                <strong>Rincian:</strong>
+                            </p>
+
+                            <span class="mb-0">Item Tagihan Satu</span>
+                            <div class="callout callout-default pl-2 py-1 mb-2 border-top-0 border-right-0 border-bottom-0">
+                                <small class="align-top text-secondary">Rp</small>1.400.000 +
+                                <small class="align-top text-secondary">Rp</small>100.000 <span class="text-secondary">(Denda)</span>
+                            </div>
+
+                            <span class="mb-0">Item Tagihan Dua</span>
+                            <div class="callout callout-default pl-2 py-1 mb-2 border-top-0 border-right-0 border-bottom-0">
+                                <small class="align-top text-secondary">Rp</small>300.000
+                            </div>
+
+                            <span class="mb-0">Item Tagihan Tiga</span>
+                            <div class="callout callout-default pl-2 py-1 mb-2 border-top-0 border-right-0 border-bottom-0">
+                                <small class="align-top text-secondary">Rp</small>500.000
+                            </div>
+
+                            <hr>
+
+                            <p class="mb-0">
+                                <a href="tagihan.html" class="btn btn-blue-dark btn-block">Lihat Detail Tagihan</a>
+                            </p>
+
                         </div>
                     </div>
-
-                    <a href="tagihan.html" class="btn btn-blue-dark btn-block">Lihat Detail Tagihan</a>
                 </div>
 
             </div>
