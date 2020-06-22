@@ -72,14 +72,11 @@
 
     <div class="wrap">
         <div class="container-lg">
-            <div class="d-flex justify-content-between mb-2">
-                <h2>
-                    Tagihan
-                </h2>
-            </div>
 
-            <div class="row">
+            <div class="row d-lg-flex justify-content-center">
                 <div class="col-lg-12">
+
+                    <h2>Tagihan</h2>
 
                     <div class="callout callout-info pl-3 py-0 mb-3 border-top-0 border-right-0 border-bottom-0">
 
@@ -93,162 +90,135 @@
                         </p>
                         <p>
                             <span class="text-secondary">Tagihan pembayaran sampai dengan tanggal <mark>01-09-2020</mark></span> <br>
-                            <strong>Total Tagihan Pembayaran</strong>:
+                            <strong class="text-secondary">Total Tagihan Pembayaran</strong>:
                             <small class="align-top text-secondary">Rp</small>
                             <span class="text-danger lead" id="total-angka">2.200.000</span>
                             (<em id="total-bilangan" style="text-transform: capitalize;">dua juta dua ratus ribu Rupiah</em>)
                         </p>
                     </div>
 
-                    <!-- <h3>[TABLE STYLE]</h3>
-                    <small>
+                    <!-- <h3>[CARD STYLE]</h3> -->
+                    <small class="my-2">
                         <i class="fa fa-chevron-right"></i> Pilih tagihan yang ingin Anda bayarkan,
-                        lalu klik tombol <strong><em>Bayar</em></strong>
+                        lalu tekan tombol <strong><em>Bayar</em></strong>
                         untuk menuju ke proses pembayaran.
                     </small>
 
-                    <div class="table-responsive-md">
-                        <table class="table table-bordered table-hover shadow">
-                            <thead class="bg-info text-light">
-                                <tr>
-                                    <th scope="col">Nama Biaya</th>
-                                    <th scope="col" class="text-center">Tanggal Akhir Bayar</th>
-                                    <th scope="col" class="text-center">Tanggal Tempo</th>
-                                    <th scope="col" class="text-center">Denda</th>
-                                    <th scope="col" class="text-center">Tagihan</th>
-                                    <th scope="col" class="text-center">Pilih</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <strong>Item Tagihan Satu</strong>
-                                        <p class="mb-0">
-                                            <small>Tahun 2019/2020, semester 6 - Genap</small>
-                                        </p>
-                                    </td>
-                                    <td class="text-center">
-                                        13-05-2020
-                                    </td>
-                                    <td class="text-center">
-                                        <mark>13-05-2020</mark>
-                                    </td>
-                                    <td class="text-right">
-                                        100.000
-                                    </td>
-                                    <td class="text-right">
-                                        1.300.000
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="form-group field-tagihan-0">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="hidden" name="Tagihan[pilih][0]" value="0">
-                                                <input type="checkbox" id="tagihan-0" class="custom-control-input pilih-tagihan" name="Tagihan[pilih][0]" value="1" checked>
-                                                <label class="custom-control-label" for="tagihan-0"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>Item Pembayaran Dua</strong>
-                                        <p class="mb-0">
-                                            <small>Tahun 2019/2020, semester 6 - Genap</small>
-                                        </p>
-                                    </td>
-                                    <td class="text-center">
-                                        22-07-2020
-                                    </td>
-                                    <td class="text-center">
-                                        <mark>22-07-2020</mark>
-                                    </td>
-                                    <td class="text-right">
-                                        0
-                                    </td>
-                                    <td class="text-right">
-                                        300.000
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="form-group field-tagihan-2">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="hidden" name="Tagihan[pilih][2]" value="0">
-                                                <input type="checkbox" id="tagihan-2" class="custom-control-input pilih-tagihan" name="Tagihan[pilih][2]" value="1" checked>
-                                                <label class="custom-control-label" for="tagihan-2"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>Item Pembayaran Tiga</strong>
-                                        <p class="mb-0">
-                                            <small>Tahun 2019/2020, semester 6 - Genap</small>
-                                        </p>
-                                    </td>
-                                    <td class="text-center">
-                                        01-09-2020
-                                    </td>
-                                    <td class="text-center">
-                                        <mark>01-09-2020</mark>
-                                    </td>
-                                    <td class="text-right">
-                                        0
-                                    </td>
-                                    <td class="text-right">
-                                        500.000
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="form-group field-tagihan-3">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="hidden" name="Tagihan[pilih][3]" value="0">
-                                                <input type="checkbox" id="tagihan-3" class="custom-control-input pilih-tagihan" name="Tagihan[pilih][3]" value="1">
-                                                <label class="custom-control-label" for="tagihan-3"></label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td colspan="6">
-                                        <button type="button" id="submit-tagihan" class="btn btn-info" name="submit">
-                                            Bayar
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div> -->
-
-                    <h3>[CARD STYLE]</h3>
-
-                    <div class="card my-3 shadow-sm bg-white">
-                        <div class="card-header d-md-flex justify-content-between">
-                            <strong>Item Tagihan Satu</strong>
-                            Tahun 2019/2020, semester 6 - Genap
-                        </div>
-                        <div class="card-body">
-
-                            <div class="row">
-                                <div class="col-sm">
-                                    <small class="text-secondary">Batas Pembayaran</small>
-                                    <p class="mb-0">13-05-2020</p>
-                                </div>
-                                <div class="col-sm">
-                                    <small class="text-secondary">Akhir Tempo</small>
-                                    <p class="mb-0">13-05-2020</p>
-                                </div>
-                                <div class="col-sm">
-                                    <small class="text-secondary">Denda</small>
-                                    <p class="mb-0">100.000</p>
-                                </div>
-                                <div class="col-sm">
-                                    <small class="text-secondary">Tagihan</small>
-                                    <p class="mb-0">1.300.000</p>
+                    <div id="tagihan-list">
+                        <div class="card card-tagihan shadow-sm my-3">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-md-4">
+                                        <strong class="text-blue-dark">Item Tagihan Satu</strong> <br>
+                                        <small>Tahun 2019/2020, semester 6 - Genap</small>
+                                        <hr class="my-1 d-sm-block d-md-none">
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Tagihan</small>
+                                        <p class="mb-0">1.300.000</p>
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Denda</small>
+                                        <p class="mb-0">100.000</p>
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Batas Pembayaran</small>
+                                        <p class="mb-0">13-05-2020</p>
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Akhir Tempo</small>
+                                        <p class="mb-0">13-05-2020</p>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="card-footer bg-white">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input pilih-tagihan" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">
+                                        <span class="border border-info rounded text-info px-2 py-1 pilih-tagihan-label">Pilih Tagihan</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="card card-tagihan shadow-sm my-3">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-md-4">
+                                        <strong class="text-blue-dark">Item Pembayaran Dua</strong> <br>
+                                        <small>Tahun 2019/2020, semester 6 - Genap</small>
+                                        <hr class="my-1 d-sm-block d-md-none">
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Tagihan</small>
+                                        <p class="mb-0">300.0000</p>
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Denda</small>
+                                        <p class="mb-0">0</p>
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Batas Pembayaran</small>
+                                        <p class="mb-0">22-07-2020</p>
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Akhir Tempo</small>
+                                        <p class="mb-0">22-07-2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input pilih-tagihan" id="customCheck2">
+                                    <label class="custom-control-label" for="customCheck2">
+                                        <span class="border border-info rounded text-info px-2 py-1 pilih-tagihan-label">Pilih Tagihan</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card card-tagihan shadow-sm my-3">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-md-4">
+                                        <strong class="text-blue-dark">Item Pembayaran Tiga</strong> <br>
+                                        <small>Tahun 2019/2020, semester 6 - Genap</small>
+                                        <hr class="my-1 d-sm-block d-md-none">
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Tagihan</small>
+                                        <p class="mb-0">500.000</p>
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Denda</small>
+                                        <p class="mb-0">100.000</p>
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Batas Pembayaran</small>
+                                        <p class="mb-0">01-09-2020</p>
+                                    </div>
+                                    <div class="col-6 col-md-2">
+                                        <small class="text-nowrap text-secondary">Akhir Tempo</small>
+                                        <p class="mb-0">01-09-2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input pilih-tagihan" id="customCheck3">
+                                    <label class="custom-control-label" for="customCheck3">
+                                        <span class="border border-info rounded text-info px-2 py-1 pilih-tagihan-label">Pilih Tagihan</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-3">
+                            <button type="button" id="submit-tagihan" class="btn btn-block btn-primary" name="submit">
+                                Bayar
+                            </button>
                         </div>
                     </div>
 
@@ -353,8 +323,26 @@
                 }, 1000);
             });
         });
+
         $('#bayar').on('click', function (e) {
             window.location.replace("pembayaran.html");
+        });
+
+        $('.card-tagihan').hover(
+        function() { $(this).addClass('shadow'); },
+        function() { $(this).removeClass('shadow'); }
+        );
+
+        $('.pilih-tagihan').on('change', function(e) {
+
+            const checkbox = $(this);
+            console.log(checkbox[0].labels);
+
+            if (checkbox.is(':checked')) {
+                checkbox.closest('.card').addClass('border-info');
+            } else {
+                checkbox.closest('.card').removeClass('border-info');
+            }
         });
     </script>
 
